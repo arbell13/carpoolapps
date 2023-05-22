@@ -32,6 +32,7 @@ if (is_null($row['pass_id_confirmed_at'])) {
         .container{
             border: dashed;
             border-radius: 20px;
+            padding: 20px;
         }
         body{
             background-color: pink;
@@ -52,10 +53,36 @@ h3{
 h1{
     text-align: center;
 }
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
     </style>
 </head>
 
 <body>
+    <div class="topnav">
+    <a href="profile.php"> Back </a>
+    </div>
 <img src="carpool.png" class="center">
 <h1 class="mb-3"> Update Profile </h1>
     <div class="container my-3 col-lg-5">
@@ -75,7 +102,6 @@ h1{
 
                     <label for="lname" class="form-label">Last Name <span class="text-danger">*</span></label>
                     <input type="text" name="lname" id="lname" class="form-control" required value="<?= $row['user_lname'] ?>" <?= $pass_id_confirmed == 'true' ? 'readonly' : '' ?>>
-\
                     <label for="contact_no" class="form-label">Contact Number</label>
                     <input type="text" minlength="11" maxlength="11" placeholder="09000000000" name="contact_no" id="contact_no" class="form-control">
 
@@ -112,7 +138,7 @@ h1{
             <div class="row">
                 <div class="col">
                     <input type="submit" name="register" value="Update" class="btn btn-primary">
-                    <a href="profile.php" class="btn btn-secondary"> Back </a>
+
                 </div>
             </div>
         </form>

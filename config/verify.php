@@ -37,5 +37,5 @@ if($_SERVER['REQUEST_METHOD'] === 'GET'){
 
     $_SESSION['bg'] =  "success";
     $_SESSION['message'] = "Your email is now verified! You may now login to your account.";
-    header('Location: ' . $home .'/index.php');
+    header('Location: /login.php');
 }

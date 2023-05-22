@@ -3,7 +3,7 @@
 $server = "localhost";
 $server_username = "root";
 $server_password = "";
-$server_database = "carpoolapp";
+$server_database = "carpooling";
 $home = "http://localhost/carpooling";
 
 // $server = "localhost";

@@ -3,13 +3,13 @@
 include '../../includes/connection.php';
 include_once '../../includes/auth.php';
 
-// Retrieves Pending Car Approval
-$sql = "SELECT * FROM cars 
-INNER JOIN users
-ON cars.driv_id = users.user_id
-WHERE car_confirmed_at IS NULL AND car_rejected = 0;
-";
-$result = $connection->query($sql);
+// // Retrieves Pending Car Approval
+// $sql = "SELECT * FROM cars 
+// INNER JOIN users
+// ON cars.driv_id = users.user_id
+// WHERE car_confirmed_at IS NULL AND car_rejected = 0;
+// ";
+// $result = $connection->query($sql);
 
 if (!empty($_SESSION['message'])) {
     $message = $_SESSION['message'];
@@ -65,7 +65,7 @@ if (!empty($_SESSION['message'])) {
             </thead>
             <tbody>
 
-                <?php
+                <!-- <?php
                 if ($result->num_rows > 0) :
                     $x = 1;
                     while ($row = $result->fetch_assoc()) :
@@ -86,7 +86,7 @@ if (!empty($_SESSION['message'])) {
                             <!-- <td> <?= date("M d, Y H:i A", strtotime($row['user_verified_at'])) ?> </td> -->
                             <!-- date("M d, Y H:iA", strtotime($row['user_verified_at']) -->
                         </tr>
-                <?php
+                <?php 
                         $x++;
                     endwhile;
                 endif;
